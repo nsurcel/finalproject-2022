@@ -205,6 +205,12 @@ footer li img:hover {
   border: 10px solid #9136AE;
 }
 
+.resume-container:hover {
+  filter: drop-shadow(4px 4px 4px #b0b0b0);
+  transform:scale(1.02);
+  transition: all 0.7s;
+}
+
 .r-title {
   color: #9136AE;
   font-size: 30px;
