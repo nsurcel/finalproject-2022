@@ -68,6 +68,10 @@
     transition: all 0.7s;
 }
 
+.light-mode .row, .light-mode .column {
+    color: #FFFFFF;
+}
+
 /* Tablet Media Query */
 @media screen and (min-width: 600px) {
     .all-projects {
