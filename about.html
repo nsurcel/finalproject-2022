@@ -7,6 +7,7 @@
     <!-- Stylesheet Imports -->
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/about.css">
     <!-- Font Imports -->
     <link href="https://fonts.googleapis.com" rel="stylesheet"> 
     <link href="https://fonts.gstatic.com" crossorigin rel="stylesheet"> 
@@ -20,8 +21,10 @@
         <a href="index.html"><img src="images/Pisces-Emoji.png" alt="Pisces emoji"></a>
         <h1 class="name">Nicole Surcel</h1>
         <ul>
+          <li><button class="toggle" onclick="myFunction()">🌓</button></li>
+          <br/><br/>
           <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
+          <li class="active"><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
         </ul>
       </nav>
@@ -29,52 +32,59 @@
     <main id="main" tabindex="0">
       <h2 id="heading">About Me</h2>
       <div class="about-content">
-        <img src="images/Blurry-Selfie.jpg" width="200" alt="Selfie of Nicole and two friends">
-        <img src="images/Beach.jpg" width="200" alt="Photo of Nicole at beach"><br/><br/> As a current <br/> sophomore at UofM, I have fallen in love <br/> with the field of UI/UX <br/> Design & Research <br/> in just one year. <br/> I’m particularly <br/> interested in studying <br/>  the psychology
-        <img src="images/Birthday-Dinner.jpg" width="200" alt="Photo of Nicole at beach">
-        <img src="images/Nicole-Ann.jpg" width="200" alt="Photo of Nicole with friend at carnival"><br/><br/><br/> behind human <br/> interactions with products. I’m based in Chicago but am <br/> currently open to all product design <br/> positions for the <br/> summer of 2023.
-        <img src="images/Cantina.jpg" width="200" alt="Photo of Nicole with friends at a restaurant">
-        <img src="images/Chicago-Selfie.jpg" width="200" alt="Photo of Nicole on balcony with city skyline in background"><br/><br/><br/><br/> Outside of UX, I have <br/> a passion for photography, <br/> psychological thrillers, and house music.
-        <img src="images/Disco.jpg" width="200" alt="Photo of Nicole and friend at a disco">
-        <img src="images/Mirror-Selfie.jpg" width="200" alt="Mirror photo of Nicole with roommates in apartment"><br/><br/><br/><br/> Resume and <br/> transcript can also <br/> be provided upon request.
-        <img src="images/MSU-Gameday.jpg" width="200" alt="Photo of Nicole with MSU friend at a gameday tailgate">
+        <img class="selfie" src="images/Blurry-Selfie.jpg" alt="Selfie of Nicole and two friends">
+        <img class="beach" src="images/Beach.jpg" alt="Photo of Nicole at beach">
+        <img class="dinner" src="images/Birthday-Dinner.jpg" alt="Photo of Nicole at birthday dinner with friends">
+        <p class="first-paragraph">As a current sophomore at UofM, I have fallen in love with the field of UI/UX Design & Research in just one year.</p>
+        <img class="carnival" src="images/Nicole-Ann.jpg" alt="Photo of Nicole with friend at carnival">
+        <img class="cantina" src="images/Cantina.jpg" alt="Photo of Nicole with friends at a restaurant">
+        <img class="chicago" src="images/Chicago-Selfie.jpg" alt="Photo of Nicole on balcony with city skyline in background">
+        <p class="second-paragraph">I’m particularly interested in studying the psychology behind human interactions with products.</p>
+        <img class="disco" src="images/Disco.jpg" alt="Photo of Nicole and friend at a disco">
+        <img class="mirror" src="images/Mirror-Selfie.jpg" alt="Mirror photo of Nicole with roommates in apartment">
+        <img class="msu" src="images/MSU-Gameday.jpg" alt="Photo of Nicole with MSU friend at a gameday tailgate">
+        <p class="third-paragraph">I’m based in Chicago but am currently open to all product design positions for the summer of 2023.</p>
+        <p class="fourth-paragraph">Outside of UX, I have a passion for photography, psychological thrillers, and house music.</p>
       </div>
 
     <!-- Contact Form -->
-        <form class="contact-form"
-            action="https://formspree.io/mqklerwq"
-            method="POST"
-        >
-        <fieldset>
-            <legend id="contact-header">Get in touch!</legend>
-            <br/>
-            <label>
-                Name:
-                <br/><input type="text" id="name" placeholder="Ex. Jane Smith">
-            </label>
-            <br/><br/>
-            <label>
-                Email:
-                <br/><input type="text" id="email" placeholder="Ex. user123@gmail.com">
-            </label>
-            <br/><br/>
-            <label>
-                Enter message:
-                <br/><textarea id="message" placeholder="Ex. Coffee chat request"></textarea>
-            </label>
-            <br/><br/>
-        </fieldset>
-        <button type="submit">Send</button>
-        </form>
+    <form class="contact-form"
+      action="https://formspree.io/f/xoqbgajk"
+      method="POST"
+    >
+
+      <label>
+        Get in Touch!
+      </label>
+      <br/><br/>
+      <label>
+        Your name:
+        <input type="name" name="name" placeholder="Ex. Jane Smith">
+      </label>
+      <br/><br/>
+      <label>
+        Your email:
+        <input type="email" name="email" placeholder="Ex. user123@gmail.com">
+      </label>
+      <br/><br/>
+      <label>
+        Your message:
+        <textarea name="message" placeholder="Ex. Coffee chat request"></textarea>
+      </label>
+      <br/><br/>
+      <!-- your other form fields go here -->
+      <button type="submit">Send</button>
+    </form>
       
   </main>
   <footer>
-      <p>Connect with me!</p>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/nicole-surcel" target="_blank"><img src="images/LinkedIn-Logo.png" width="50" alt="LinkedIn logo"></a></li>
-        <li><a href="https://www.github.com/nsurcel" target="_blank"><img src="images/Github-Logo.png" width="50" alt="Github logo"></a></li>
-      </ul>
       <p>Made by Nicole Surcel with ❤️ in 2022</p>
   </footer>
+  <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("light-mode");
+    }
+  </script>
 </body>
 </html>
