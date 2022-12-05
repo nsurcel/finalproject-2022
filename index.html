@@ -7,6 +7,7 @@
     <!-- Stylesheet Imports -->
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <!-- Font Imports -->
     <link href="https://fonts.googleapis.com" rel="stylesheet"> 
     <link href="https://fonts.gstatic.com" crossorigin rel="stylesheet"> 
@@ -20,7 +21,9 @@
         <a href="index.html"><img src="images/Pisces-Emoji.png" alt="Pisces emoji"></a>
         <h1 class="name">Nicole Surcel</h1>
         <ul>
-          <li><a href="index.html">Work</a></li>
+          <li><button class="toggle" onclick="myFunction()">🌓</button></li>
+          <br/><br/>
+          <li class="active"><a href="index.html">Work</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
         </ul>
@@ -28,30 +31,48 @@
     </header>
     <main id="main" tabindex="0">
       <div class="index-header">
-          <div class="index-big">
-              <p class="hi-there">Hi, there! 👋</p>
-          </div>
-          <h2 class="index-small">I am Nicole Surcel, a current student researcher and designer @ UofM.</h2>
-          <br/><br/><br/>
+        <p class="hi-there">Hi, there! 👋</p>
       </div>
+      <h2 class="index-small">I am Nicole Surcel, a current student researcher and designer @ UofM.</h2>
+      <br/><br/><br/>
       <div class="all-projects">
-          <img src="images/P1-Cover.png" width="500" alt="Project 1 photo cover"/>
-          <img src="images/P2-Cover.png" width="500" alt="Project 2 photo cover"/>
-          <img src="images/P3-Cover.png" width="500" alt="Project 3 photo cover"/>
-          <img src="images/P4-Cover.png" width="500" alt="Project 4 photo cover"/>
-          <img src="images/P5-Cover.png" width="500" alt="Project 5 photo cover"/>
-          <img src="images/P6-Cover.png" width="500" alt="Project 6 photo cover"/>
+          <img src="images/P1-Cover.png" alt="Project 1 photo cover"/>
+          <img src="images/P2-Cover.png" alt="Project 2 photo cover"/>
+          <img src="images/P3-Cover.png" alt="Project 3 photo cover"/>
+          <img src="images/P4-Cover.png" alt="Project 4 photo cover"/>
+          <img src="images/P5-Cover.png" alt="Project 5 photo cover"/>
+          <img src="images/P6-Cover.png" alt="Project 6 photo cover"/>
       </div>
-      
+      <p class="connect">Connect with me!</p>
+      <div class='row'>
+        <div class='column'>
+          <div class='linkedin-column'>
+            <ul>
+              <li><a target="_blank" href="https://www.linkedin.com/in/nicole-surcel"><img src="images/LinkedIn-Logo.png" alt="Github logo"></li>
+            </ul>
+            </a>
+          </div>
+        </div>
+        <div class='column'>
+          <div class='github-column'>
+            <ul>
+              <a target="_blank" href="https://www.github.com/nsurcel"><img src="images/Github-Logo.png" alt="Github logo">
+            </ul>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
   </main>
   <footer>
-    <br/><br/><br/><br/>
-      <p>Connect with me!</p>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/nicole-surcel" target="_blank"><img src="images/LinkedIn-Logo.png" width="50" alt="LinkedIn logo"></a></li>
-        <li><a href="https://www.github.com/nsurcel" target="_blank"><img src="images/Github-Logo.png" width="50" alt="Github logo"></a></li>
-      </ul>
-      <p>Made by Nicole Surcel with ❤️ in 2022</p>
+      <p>Made by Nicole Surcel in 2022 ❤️</p>
   </footer>
+  <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("light-mode");
+    }
+  </script>
 </body>
 </html>
