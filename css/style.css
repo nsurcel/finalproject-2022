@@ -193,7 +193,7 @@ footer p {
 
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  shake {
+  @keyframes shake {
       animation: none;
   }
 }
