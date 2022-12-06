@@ -1,8 +1,23 @@
+.index-small {
+    margin: 0 30px 0 0;
+}
+
 .all-projects {
-    display: grid;
-    grid-template-columns: auto;
-    align-content: center;
-    justify-content: center;
+    margin: 0 30px 0 0;
+}
+
+.row1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column1 {
+    flex: 100%;
+    max-width: 100%;
+}
+
+.column1 .middle-two, .column1 .last-two {
+    display: none;
 }
   
 .all-projects img {
@@ -10,9 +25,6 @@
     max-width: 90%;
     justify-content: center;
     margin: 30px;
-    border: 4px solid #000000;
-    /* 9136AE */
-    border-radius: 50px;
 }
   
 .all-projects img:hover {
@@ -33,7 +45,7 @@
     color: #FFFFFF;
 }
 
-.row {
+.row2 {
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -41,10 +53,9 @@
     width: 100%;
 }
   
-.column {
+.column2 {
     display: flex;
     flex-direction: column;
-    list-style: none;
     flex-basis: 100%;
     flex: 1;
 }
@@ -53,9 +64,11 @@
     height: 100%;
 }
 
-.linkedin-column img, .github-column img {
+.linkedin-column img, .gmail-column img, .github-column img {
     width: 30%;
-    margin: 0 0 0 100px; 
+    margin: 0 0 0 70px;
+    vertical-align: middle;
+    border: none;
 }
   
 .github-column {
@@ -68,29 +81,63 @@
     transition: all 0.7s;
 }
 
-.light-mode .row, .light-mode .column {
+.light-mode .all-projects img {
+    border: 4px solid #000000;
+    border-radius: 20px;
+}
+
+.light-mode .row2, .light-mode .column2 {
     color: #FFFFFF;
+}
+
+.light-mode .linkedin-column img, .light-mode .gmail-column img, .light-mode .github-column img {
+    border: none;
 }
 
 /* Tablet Media Query */
 @media screen and (min-width: 600px) {
-    .all-projects {
-        grid-template-columns: repeat(2, auto);
-        margin: 0 30px 0 0;
+    .column1 {
+        flex: 50%;
+        max-width: 50%;
     }
 
-    .linkedin-column img, .github-column img {
-        margin: 0 0 0 140px;
+    .column1 img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    .column1 .middle-two {
+        display: inline-flex;
+    }
+
+    .column1 .last-two {
+        display: none;
+    }
+
+    .linkedin-column img, .gmail-column img, .github-column img {
+        margin: 0 0 0 100px;
     }
 }
 
 /* Desktop Media Query */
 @media screen and (min-width: 800px) {
-    .all-projects {
-        grid-template-columns: repeat(3, auto);
+    .column1 {
+        flex: 33%;
+        max-width: 33%;
+    }
+
+    .column1 .last-two {
+        display: inline-flex;
+    }
+
+    .column1 img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
     }
     
-    .linkedin-column img, .github-column img {
-        margin: 0 0 0 175px;
+    .linkedin-column img, .gmail-column img, .github-column img {
+        margin: 0 0 0 115px;
     }
 }
